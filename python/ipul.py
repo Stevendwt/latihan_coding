@@ -1,3 +1,17 @@
+from tkinter import *
+
+tampilan = Tk()
+tampilan.geometry("1275x720+0+0")
+tampilan.resizable(0,0)
+tampilan.title("Covert Temperatur") # nama aplikasi
+
+topFrame=Frame(tampilan,bd=10,relief=RIDGE,bg='white') # frame judul
+topFrame.pack(side=TOP)
+
+labelTitle=Label(topFrame,text='Covert Temperatur',font=('Castellar',39,'bold'),fg='#fde4c3',bg='#302a18', bd=15,width=30) #judul aplikasi
+labelTitle.grid(row=0,column=10)
+
+tampilan.config(bg='#784c12')
 def convert_temperature():
     print('.......konversi suhu.......')
     print("ce. Celcius")
@@ -92,4 +106,4 @@ def convert_from_reamur(ream, target_scale):
         convert_temperature()
 
 # Start the program
-convert_temperature()
+tampilan.mainloop()
