@@ -1,0 +1,37 @@
+.search {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 10px;
+    transition-duration: 500ms;
+    cursor: pointer;
+    font-family: 'inter' , sans-serif;
+    font-family: 'lato' , sans-serif;
+    font-family: 'Noto Sans' , sans-serif;
+    font-size: 15px;
+    border: 1px solid white;
+    overflow: hidden;
+    background-image: url(icons/search-white.svg);
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 45% 50%;
+}
+
+.search.hover{
+    border: 1px solid #FF9950;
+
+}
+
+.search.fokus{
+    width: 200px;
+    cursor: text;
+    padding-left: 40px;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #FF9950;
+    background: url(icons/saearch.svg) no-repeat;
+    background-size: 22px;
+    background-position: 10px 50%;
+}
