@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('pilihan').addEventListener('change', function() {
+            var inputDataDiv = document.getElementById('inputData');
+            if (this.value === '1' || this.value === '3') {
+                inputDataDiv.style.display = 'block';
+            } else {
+                inputDataDiv.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Mahasiswa</title>
+</head>
+<body>
+    <h1>Program Data Mahasiswa</h1>
+    <form action="/process" method="post">
+        <label for="pilihan">Pilihan:</label>
+        <select name="pilihan" id="pilihan">
+            <option value="1">Input Data Mahasiswa</option>
+            <option value="2">Tampilkan Data Mahasiswa</option>
+            <option value="3">Export Data ke Excel</option>
+        </select><br><br>
+
+        <div id="inputData" style="display: none;">
+            <label for="prodi">Program Studi:</label>
+            <input type="text" name="prodi" id="prodi"><br><br>
+            <label for="nama">Nama:</label>
+            <input type="text" name="nama" id="nama"><br><br>
+            <label for="nim">NIM:</label>
+            <input type="text" name="nim" id="nim"><br><br>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('pilihan').addEventListener('change', function() {
+            var inputDataDiv = document.getElementById('inputData');
+            if (this.value === '1' || this.value === '3') {
+                inputDataDiv.style.display = 'block';
+            } else {
+                inputDataDiv.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tampilkan Data Mahasiswa</title>
+</head>
+<body>
+    <h1>Data Mahasiswa</h1>
+    <table border="1">
+        <tr>
+            <th>Nama</th>
+            <th>NIM</th>
+            <th>Prodi</th>
+        </tr>
+        {% for mahasiswa in data %}
+            <tr>
+                <td>{{ mahasiswa['nama'] }}</td>
+                <td>{{ mahasiswa['nim'] }}</td>
+                <td>{{ mahasiswa['prodi'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
